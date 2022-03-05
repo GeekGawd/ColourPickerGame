@@ -1,0 +1,107 @@
+@import url(./reset.css);
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.active{
+  display:none;
+}
+.isDisabled {
+  color: currentColor;
+  cursor: not-allowed;
+  opacity: 0.5;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: brown;
+}
+a:hover  {
+  background-color: rgb(226, 135, 135);
+ }
+ 
+/* Header */
+#color-game-header {
+  background-color: rgb(255, 174, 23);
+  color: rgb(255, 255, 255);
+  
+  height: 20vh;
+}
+#color-game-wrapper{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  height: inherit;
+  flex-direction: column;
+  row-gap: 12px;
+  
+}
+#color-game-header > #color-game-wrapper>.text-node-one {
+  font-size: large;
+}
+#color-game-header > #color-game-wrapper>.text-node-two {
+  font-size: 1.8em;
+}
+#color-game-header > #color-game-wrapper>.text-node-three {
+  font-size: larger;
+}
+/* STATUS */
+
+#status {
+  background-color: white;
+  color: rgb(161, 0, 0);
+  display: flex;
+  justify-content: center;
+  height: 4vh;
+}
+#status-wrapper{
+  display: flex;
+  justify-content:space-evenly;
+  width:80%;
+  height: inherit;
+}
+#status > #status-wrapper>.levels {
+  display: flex;
+  gap: 12px;
+}
+
+/* color-palette-grid */
+#color-palette-grid-container {
+  display: flex;
+  justify-content: center;
+  background: black;
+  height: 76vh;
+}
+#color-palette-grid-container > .color-palette-grid {
+  display: grid;
+  margin: 12px 0;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 12px;
+  grid-row-gap: 12px;
+  width: 50%;
+}
+.color-palette-grid > .color-box-one {
+  background-color: aquamarine;
+  border-radius: 12px;
+  box-shadow: 0px -2px 24px 8px #575454;
+}
+
+@media (max-width: 884px) {
+  #color-palette-grid-container > .color-palette-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 3fr);
+  }
+}
+
+@keyframes fadeIn {
+  to{
+    opacity:0;
+  }
+  
+}
+.fade-in {
+  opacity: 1;
+  animation: fadeIn 1s ease-in 1 forwards;
+}
